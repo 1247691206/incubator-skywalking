@@ -108,6 +108,7 @@ public class MetricServiceGRPCHandler extends MetricsServiceGrpc.MetricsServiceI
                                 case GAUGE:
                                     for (Metrics.Metric metric : metricFamily.getMetricList()) {
                                         timestamp = metric.getTimestampMs();
+                                        logger.debug("Envoy metric reported from service[{}], service instance[{}], timestamp [{}]", serviceName, serviceInstanceName, timestamp);
                                         value = metric.getGauge().getValue();
 
                                         EnvoyInstanceMetric metricSource = new EnvoyInstanceMetric();

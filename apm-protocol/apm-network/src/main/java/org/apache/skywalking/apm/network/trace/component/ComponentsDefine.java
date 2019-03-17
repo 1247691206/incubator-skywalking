@@ -114,6 +114,8 @@ public class ComponentsDefine {
 
     public static final OfficialComponent ZOOKEEPER =  new OfficialComponent(58, "Zookeeper");
 
+    public static final OfficialComponent THRIFT =  new OfficialComponent(59, "Thrift");
+
     private static ComponentsDefine INSTANCE = new ComponentsDefine();
 
     private String[] components;
